@@ -25,19 +25,20 @@ public class frame extends JFrame {
 		//label.setHorizontalAlignment(JLabel.CENTER);
 		//label.setVerticalAlignment(JLabel.TOP);
 		label.setBounds(40, 40, 700, 80);
-		label.setVisible(true);
+		label.setBackground(new Color(233, 242, 234));
+		
 		label.setOpaque(true);
 		
 		
 		
 		JTextField input1 = new JTextField();
-		input1.setBounds(40, 200, 500, 75);
+		input1.setBounds(40, 160, 700, 75);
 		
 		
 		
 		this.add(input1);
 		this.add(label);
-		
+		label.setVisible(true);
 	}
 	
 	
