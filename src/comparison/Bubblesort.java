@@ -6,9 +6,12 @@ public class Bubblesort {
     public Bubblesort(int b[])
      {
             // Scanner sc = new Scanner(System.in);
+            long beforeUsedMem;
+            long startMemory = Runtime.getRuntime();
             long startTime = System.nanoTime();
             int arr1[] = bubbleSort(b);
             long endTime = System.nanoTime();
+            long endMemory = Runtime.getRuntime()
             System.out.println("Sorted array");
             printArray(arr1);
             long timeElapsed = endTime - startTime;
