@@ -16,7 +16,7 @@ public class frame extends JFrame {
 		this.setVisible(true);
 		this.setSize(800,800);
 		this.setLocationRelativeTo(null); //To center the code
-		//this.setResizable(false);
+		this.setResizable(false);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.getContentPane().setBackground(new Color(233, 242, 234));
 		JLabel label = new JLabel();
@@ -24,13 +24,14 @@ public class frame extends JFrame {
 		label.setFont(new Font("MV Boli", Font.PLAIN,30));
 		//label.setHorizontalAlignment(JLabel.CENTER);
 		//label.setVerticalAlignment(JLabel.TOP);
-		label.setBounds(40, 40, 30, 200);
+		label.setBounds(40, 40, 700, 80);
 		label.setVisible(true);
 		label.setOpaque(true);
 		
 		
+		
 		JTextField input1 = new JTextField();
-		input1.setBounds(200, 200, 50, 200);
+		input1.setBounds(40, 200, 500, 75);
 		
 		
 		
