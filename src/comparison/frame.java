@@ -36,8 +36,10 @@ public class frame extends JFrame {
 		JTextField input1 = new JTextField();
 		input1.setBounds(40, 160, 700, 75);
 
-		JButton button = new JButton("Sort");
-		button.setBounds(70, 260, 500, 75);
+			//The Button for Bubble Sort
+
+		JButton button = new JButton("Bubble Sort");
+		button.setBounds(70, 260, 100, 75);
 		button.setFocusable(true);
 		button.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  
@@ -54,9 +56,31 @@ public class frame extends JFrame {
 						}
 					}  
 				});
-		
+
+		//The Button for Tim Sort
+
+		JButton button2 = new JButton("Tim Sort");
+		button2.setBounds(200, 260, 100, 75);
+		button2.setFocusable(true);
+		button2.addActionListener(new ActionListener(){  
+			public void actionPerformed(ActionEvent e){  
+						/** Code for opening a new window */ 
+						if(e.getSource()==button){
+							String arr=input1.getText();
+							String[] array = arr.split(",");
+							int[] arra = new  int[array.length];
+							for (int i=0; i<array.length; i++){
+								arra[i]= Integer.parseInt(array[i].trim());
+							}
+							new Timwin(arra);
+
+						}
+					}  
+				});
+
 		
 		this.add(button);
+		this.add(button2);
 		this.add(input1);
 		this.add(label);
 		this.setVisible(true);
