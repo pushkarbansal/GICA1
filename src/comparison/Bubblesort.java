@@ -1,12 +1,12 @@
 package comparison;
 
-import java.util.concurrent.TimeUnit;
+
 
 public class Bubblesort {
     public Bubblesort(int b[])
      {
             // Scanner sc = new Scanner(System.in);
-            long beforeUsedMem;
+            // long beforeUsedMem;
             // long startMemory = Runtime.getRuntime();
             long startTime = System.nanoTime();
             int arr1[] = bubbleSort(b);

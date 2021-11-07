@@ -65,7 +65,7 @@ public class frame extends JFrame {
 		button2.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  
 						/** Code for opening a new window */ 
-						if(e.getSource()==button){
+						if(e.getSource()==button2){
 							String arr=input1.getText();
 							String[] array = arr.split(",");
 							int[] arra = new  int[array.length];
@@ -78,9 +78,50 @@ public class frame extends JFrame {
 					}  
 				});
 
+				//This button is for Stooge Sort
+
+		JButton button3 = new JButton("Stooge" + '\n' + " Sort");
+		button3.setBounds(330, 260, 110, 75);
+		button3.setFocusable(true);
+		button3.addActionListener(new ActionListener(){  
+			public void actionPerformed(ActionEvent e){  
+						/** Code for opening a new window */ 
+						if(e.getSource()==button3){
+							String arr=input1.getText();
+							String[] array = arr.split(",");
+							int[] arra = new  int[array.length];
+							for (int i=0; i<array.length; i++){
+								arra[i]= Integer.parseInt(array[i].trim());
+							}
+							new Stoogewin(arra);
+
+						}
+					}  
+				});
+
+		JButton button4 = new JButton("Stooge" + '\n' + " Sort");
+		button4.setBounds(330, 260, 110, 75);
+		button4.setFocusable(true);
+		button4.addActionListener(new ActionListener(){  
+			public void actionPerformed(ActionEvent e){  
+						/** Code for opening a new window */ 
+						if(e.getSource()==button4){
+							String arr=input1.getText();
+							String[] array = arr.split(",");
+							int[] arra = new  int[array.length];
+							for (int i=0; i<array.length; i++){
+								arra[i]= Integer.parseInt(array[i].trim());
+							}
+							new Stoogewin(arra);
+
+						}
+					}  
+				});
+
 		
 		this.add(button);
 		this.add(button2);
+		this.add(button3);
 		this.add(input1);
 		this.add(label);
 		this.setVisible(true);

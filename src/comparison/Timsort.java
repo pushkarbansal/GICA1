@@ -115,7 +115,6 @@ public class Timsort {
 	public static int[] timSort(int[] arr, int n)
 	{
 		int minRun = minRunLength(MIN_MERGE);
-	
 		// Sort individual subarrays of size RUN
 		for (int i = 0; i < n; i += minRun)
 		{
