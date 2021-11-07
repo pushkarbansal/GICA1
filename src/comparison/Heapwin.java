@@ -11,7 +11,7 @@ public class Heapwin {
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f1.getContentPane().setBackground(new Color(233, 242, 234));
 
-        new Heapsort(a);
-
+        Heapsort print = new Heapsort(a);
+        print.printArray();
     }
 }

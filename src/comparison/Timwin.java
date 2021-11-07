@@ -13,7 +13,7 @@ public class Timwin {
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f1.getContentPane().setBackground(new Color(233, 242, 234));
 
-        new Timsort(a);
-
+       Timsort print = new Timsort(a);
+        print.printArray();
     }
 }

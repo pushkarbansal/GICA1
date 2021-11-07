@@ -4,6 +4,7 @@ package comparison;
 
 public class Hybridsort {
     static int[] array;
+	long timeElapsed;
     public Hybridsort(int b[])
      {
             // Scanner sc = new Scanner(System.in);
@@ -13,17 +14,19 @@ public class Hybridsort {
             hybridSort(b, 0 , b.length - 1);
             long endTime = System.nanoTime();
             // long endMemory = Runtime.getRuntime()
-            System.out.println("Hybrid Sorted array");
-            printArray(array);
-            long timeElapsed = endTime - startTime;
             
-            new Model(timeElapsed/1000000);
+            // printArray(array);
+            timeElapsed = endTime - startTime;
+            
+            // new Model(timeElapsed/1000000);
     
         
     }
+	float val(){
+        return (timeElapsed/1000000);
+      }
     
-		private static void insertionSort(int a[], int low,
-									int high)
+	private static void insertionSort(int a[], int low,	int high)
 	{
 		for (int i = low + 1; i <= high; i++) {
 			for (int j = i - 1; j >= low; j--) {
@@ -92,11 +95,12 @@ public class Hybridsort {
 
      
         /* Prints the array */
-        void printArray(int a[])
+        void printArray()
         {
-            int n = a.length;
+			System.out.println("Hybrid Sorted array");
+            int n = array.length;
             for (int i=0; i<n; ++i)
-                System.out.print(a[i] + " ");
+                System.out.print(array[i] + " ");
             System.out.println();
         }
 }

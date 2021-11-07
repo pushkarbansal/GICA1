@@ -1,6 +1,8 @@
 package comparison;
 
 public class Timsort {
+	long timeElapsed;
+	int[] arr1;
     public Timsort(int b[])
     {
            // Scanner sc = new Scanner(System.in);
@@ -8,17 +10,18 @@ public class Timsort {
            // long startMemory = Runtime.getRuntime();
            long startTime = System.nanoTime();
            int n = b.length;
-           int arr1[] = timSort(b, n);
+           arr1 = timSort(b, n);
            long endTime = System.nanoTime();
            // long endMemory = Runtime.getRuntime()
-           System.out.println("Sorted array");
-           printArray(arr1, n);
-           long timeElapsed = endTime - startTime;
            
-           new Model(timeElapsed/1000000);
-   
-       
+        //    printArray(arr1, n);
+           timeElapsed = endTime - startTime;
+           
+        //    new Model(timeElapsed/1000000);
    }
+   float val(){
+	return (timeElapsed/1000000);
+  }
    static int MIN_MERGE = 32;
   
     public static int minRunLength(int n)
@@ -158,10 +161,12 @@ public class Timsort {
 	}
 
 	// Utility function to print the Array
-	public static void printArray(int[] arr, int n)
+	void printArray()
 	{
+		int n = arr1.length;
+		System.out.println("Tim Sorted array");
 		for (int i = 0; i < n; i++) {
-			System.out.print(arr[i] + " ");
+			System.out.print(arr1[i] + " ");
 		}
 		System.out.print("\n");
 	}

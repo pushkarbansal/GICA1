@@ -1,21 +1,26 @@
 package comparison;
 
 public class Mergesort {
+    int[] arr1;
+    long timeElapsed;
     public Mergesort(int[] b) {
         // Scanner sc = new Scanner(System.in);
         //    long beforeUsedMem;
            // long startMemory = Runtime.getRuntime();
            long startTime = System.nanoTime();
            int n = b.length;
-           int arr1[] = sort(b,  0, n - 1);
+           arr1 = sort(b,  0, n - 1);
            long endTime = System.nanoTime();
            // long endMemory = Runtime.getRuntime()
-           System.out.println("Merge Sorted array");
-           printArray(arr1);
-           long timeElapsed = endTime - startTime;
            
-           new Model(timeElapsed/1000000);
+        //    printArray(arr1);
+           timeElapsed = endTime - startTime;
+           
+        //    new Model(timeElapsed/1000000);
     }
+    float val(){
+        return (timeElapsed/1000000);
+      }
     
     // Merges two subarrays of arr[].
     // First subarray is arr[l..m]
@@ -90,11 +95,12 @@ public class Mergesort {
     }
   
     /* A utility function to print array of size n */
-    public static void printArray(int arr[])
+    void printArray()
     {
-        int n = arr.length;
+        System.out.println("Merge Sorted array");
+        int n = arr1.length;
         for (int i = 0; i < n; ++i)
-            System.out.print(arr[i] + " ");
+            System.out.print(arr1[i] + " ");
         System.out.println();
     }
 }

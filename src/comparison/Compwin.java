@@ -16,13 +16,23 @@ public class Compwin {
 
         Bubblesort c1 = new Bubblesort(a);
         float t1 = c1.val();
-        System.out.println("Time taken by Bubble sort in miliSeconds" + t1);
+        System.out.println("Time taken by Bubble sort in miliSeconds: " + t1);
         Heapsort c2 = new Heapsort(a);
-        float t2 = c2.val(); 
-        new Hybridsort(a);
-        new Stoogesort(a);
-        new Mergesort(a);
-        new Timsort(a);
+        float t2 = c2.val();
+        System.out.println("Time taken by Heap sort in miliSeconds: " + t2); 
+        Hybridsort c3 =  new Hybridsort(a);
+        float t3 = c3.val();
+        System.out.println("Time taken by Hybrid sort in miliSeconds: " + t3);
+        Mergesort c4 = new Mergesort(a);
+        float t4 = c4.val();
+        System.out.println("Time taken by Merge sort in miliSeconds: " + t4);
+        Stoogesort c5 = new Stoogesort(a);
+        float t5 = c5.val();
+        System.out.println("Time taken by Stooge sort in miliSeconds: " + t5);
+        Timsort c6 = new Timsort(a);
+        float t6 = c6.val();
+        System.out.println("Time taken by Tim sort in miliSeconds: " + t6);
+
 
     }
 }

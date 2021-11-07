@@ -11,7 +11,7 @@ public class Hybridwin {
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f1.getContentPane().setBackground(new Color(233, 242, 234));
 
-        new Hybridsort(a);
-
+        Hybridsort print = new Hybridsort(a);
+        print.printArray();
     }
 }

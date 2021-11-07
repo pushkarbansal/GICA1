@@ -1,21 +1,27 @@
 package comparison;
 
 public class Stoogesort {
+    int[] arr1;
+    long timeElapsed;
   public Stoogesort(int[] b) {
        // Scanner sc = new Scanner(System.in);
         //    long beforeUsedMem;
            // long startMemory = Runtime.getRuntime();
            long startTime = System.nanoTime();
            int n = b.length;
-           int arr1[] = stoogesort(b, 0, n - 1);
+           arr1 = stoogesort(b, 0, n - 1);
            long endTime = System.nanoTime();
            // long endMemory = Runtime.getRuntime()
-           System.out.println("Stooge Sorted array");
-           printArray(arr1, n);
-           long timeElapsed = endTime - startTime;
+           
+        //    printArray(arr1, n);
+           timeElapsed = endTime - startTime;
            
            new Model(timeElapsed/1000000);
   }
+  float val(){
+    return (timeElapsed/1000000);
+  }
+  
     static int[] stoogesort(int arr[], int l, int h)
     {
         if (l >= h)
@@ -46,10 +52,12 @@ public class Stoogesort {
         }
         return arr;
     }
-    public static void printArray(int[] arr, int n)
+    void printArray()
 	{
+        int n = arr1.length;
+        System.out.println("Stooge Sorted array");
 		for (int i = 0; i < n; i++) {
-			System.out.print(arr[i] + " ");
+			System.out.print(arr1[i] + " ");
 		}
 		System.out.print("\n");
     }

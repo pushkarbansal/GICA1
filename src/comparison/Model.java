@@ -11,9 +11,9 @@ public class Model {
 
     }
 
-    float val(){
-      return timeElapsed;
-    }
+    // float val(){
+    //   return timeElapsed;
+    // }
 
     
 }

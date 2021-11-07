@@ -12,7 +12,7 @@ public class Stoogewin {
 		f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f1.getContentPane().setBackground(new Color(233, 242, 234));
 
-        new Stoogesort(a);
-
+        Stoogesort print = new Stoogesort(a);
+        print.printArray();
     }
 }
