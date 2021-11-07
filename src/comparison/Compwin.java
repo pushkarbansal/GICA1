@@ -36,7 +36,12 @@ public class Compwin {
 
         DefaultCategoryDataset dcd=new DefaultCategoryDataset();
 		dcd.setValue(20, "input", "time");
-		JFreeChart jchart=ChartFactory.createLineChart("pushkar","number of inputs", "time needed", dcd);
+		dcd.setValue(20, "input", "time");
+
+		JFreeChart jchart=ChartFactory.createLineChart("pushkar","number of inputs", "time needed", dcd,PlotOrientation.VERTICAL, true,true,false);
+		ChartPanel chartPanel = new ChartPanel(jchart );
+		chartPanel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
+		f1.setContentPane(chartPanel);
 
 
 
