@@ -10,7 +10,7 @@ public class Stoogesort {
            int arr1[] = stoogesort(b, 0, n - 1);
            long endTime = System.nanoTime();
            // long endMemory = Runtime.getRuntime()
-           System.out.println("Sorted array");
+           System.out.println("Stooge Sorted array");
            printArray(arr1, n);
            long timeElapsed = endTime - startTime;
            

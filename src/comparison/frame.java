@@ -99,8 +99,8 @@ public class frame extends JFrame {
 					}  
 				});
 
-		JButton button4 = new JButton("Stooge" + '\n' + " Sort");
-		button4.setBounds(330, 260, 110, 75);
+		JButton button4 = new JButton("Merge" + '\n' + " Sort");
+		button4.setBounds(470, 260, 110, 75);
 		button4.setFocusable(true);
 		button4.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  
@@ -112,16 +112,78 @@ public class frame extends JFrame {
 							for (int i=0; i<array.length; i++){
 								arra[i]= Integer.parseInt(array[i].trim());
 							}
-							new Stoogewin(arra);
+							new Mergewin(arra);
 
 						}
 					}  
 				});
 
-		
+				//This is the button for Hybrid Sort
+
+		JButton button5 = new JButton("Hybrid" + '\n' + " Sort");
+		button5.setBounds(610, 260, 110, 75);
+		button5.setFocusable(true);
+		button5.addActionListener(new ActionListener(){  
+			public void actionPerformed(ActionEvent e){  
+						/** Code for opening a new window */ 
+						if(e.getSource()==button5){
+							String arr=input1.getText();
+							String[] array = arr.split(",");
+							int[] arra = new  int[array.length];
+							for (int i=0; i<array.length; i++){
+								arra[i]= Integer.parseInt(array[i].trim());
+							}
+							new Hybridwin(arra);
+
+						}
+					}  
+				});
+
+
+		JButton button6 = new JButton("Heap" + '\n' + " Sort");
+		button6.setBounds(250, 350, 100, 75);
+		button6.setFocusable(true);
+		button6.addActionListener(new ActionListener(){  
+			public void actionPerformed(ActionEvent e){  
+						/** Code for opening a new window */ 
+						if(e.getSource()==button6){
+							String arr=input1.getText();
+							String[] array = arr.split(",");
+							int[] arra = new  int[array.length];
+							for (int i=0; i<array.length; i++){
+								arra[i]= Integer.parseInt(array[i].trim());
+							}
+							new Heapwin(arra);
+
+						}
+					}  
+				});
+
+		JButton button7 = new JButton("undefined" + '\n' + " Sort");
+		button7.setBounds(380, 350, 100, 75);
+		button7.setFocusable(true);
+		button7.addActionListener(new ActionListener(){  
+			public void actionPerformed(ActionEvent e){  
+						/** Code for opening a new window */ 
+						if(e.getSource()==button7){
+							String arr=input1.getText();
+							String[] array = arr.split(",");
+							int[] arra = new  int[array.length];
+							for (int i=0; i<array.length; i++){
+								arra[i]= Integer.parseInt(array[i].trim());
+							}
+							new Heapwin(arra);
+
+						}
+					}  
+				});
 		this.add(button);
 		this.add(button2);
 		this.add(button3);
+		this.add(button4);
+		this.add(button5);
+		this.add(button6);
+		this.add(button7);
 		this.add(input1);
 		this.add(label);
 		this.setVisible(true);
