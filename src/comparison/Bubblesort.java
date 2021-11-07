@@ -3,23 +3,28 @@ package comparison;
 
 
 public class Bubblesort {
+    long timeElapsed;
+    int[] arr1;
     public Bubblesort(int b[])
      {
             // Scanner sc = new Scanner(System.in);
             // long beforeUsedMem;
             // long startMemory = Runtime.getRuntime();
             long startTime = System.nanoTime();
-            int arr1[] = bubbleSort(b);
+            arr1 = bubbleSort(b);
             long endTime = System.nanoTime();
             // long endMemory = Runtime.getRuntime()
-            System.out.println("Sorted array");
-            printArray(arr1);
-            long timeElapsed = endTime - startTime;
+           
+            //printArray(arr1);
+            timeElapsed = endTime - startTime;
             
-            new Model(timeElapsed/1000000);
-    
+            // Model Bubblemodel = new Model(timeElapsed/1000000);
+            // Bubbleval();
         
     }
+    float val(){
+        return (timeElapsed/1000000);
+      }
     int[] bubbleSort(int arr[])
         {
             int n = arr.length;
@@ -36,11 +41,12 @@ public class Bubblesort {
         }
      
         /* Prints the array */
-        void printArray(int arr[])
+        void printArray()
         {
-            int n = arr.length;
+            System.out.println("Bubble Sorted array");
+            int n = arr1.length;
             for (int i=0; i<n; ++i)
-                System.out.print(arr[i] + " ");
+                System.out.print(arr1[i] + " ");
             System.out.println();
         }
 }

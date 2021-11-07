@@ -3,24 +3,28 @@ package comparison;
 
 
 public class Heapsort {
-    
+    int[] array;
+    long timeElapsed;
     public Heapsort(int b[])
      {
             // Scanner sc = new Scanner(System.in);
             // long beforeUsedMem;
             // long startMemory = Runtime.getRuntime();
             long startTime = System.nanoTime();
-            int[] array = heapSort(b);
+            array = heapSort(b);
             long endTime = System.nanoTime();
             // long endMemory = Runtime.getRuntime()
-            System.out.println("Heap Sorted array");
-            printArray(array);
-            long timeElapsed = endTime - startTime;
             
-            new Model(timeElapsed/1000000);
+            // printArray(array);
+            timeElapsed = endTime - startTime;
+            
+            // new Model(timeElapsed/1000000);
     
         
     }
+    float val(){
+        return (timeElapsed/1000000);
+      }
     
 	public int[] heapSort(int arr[])
     {
@@ -71,11 +75,12 @@ public class Heapsort {
     }
  
         /* Prints the array */
-        void printArray(int a[])
+        void printArray()
         {
-            int n = a.length;
+            System.out.println("Heap Sorted array");
+            int n = array.length;
             for (int i=0; i<n; ++i)
-                System.out.print(a[i] + " ");
+                System.out.print(array[i] + " ");
             System.out.println();
         }
 }

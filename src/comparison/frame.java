@@ -52,7 +52,7 @@ public class frame extends JFrame {
 								arra[i]= Integer.parseInt(array[i].trim());
 							}
 							new Win2(arra);
-
+							
 						}
 					}  
 				});
@@ -177,6 +177,26 @@ public class frame extends JFrame {
 						}
 					}  
 				});
+
+
+		JButton button8 = new JButton("Comparison");
+		button8.setBounds(150, 450, 400, 75);
+		button8.setFocusable(true);
+		button8.addActionListener(new ActionListener(){  
+			public void actionPerformed(ActionEvent e){  
+						/** Code for opening a new window */ 
+						if(e.getSource()==button8){
+							String arr=input1.getText();
+							String[] array = arr.split(",");
+							int[] arra = new  int[array.length];
+							for (int i=0; i<array.length; i++){
+								arra[i]= Integer.parseInt(array[i].trim());
+							}
+							new Compwin(arra);
+
+						}
+					}  
+				});
 		this.add(button);
 		this.add(button2);
 		this.add(button3);
@@ -184,6 +204,7 @@ public class frame extends JFrame {
 		this.add(button5);
 		this.add(button6);
 		this.add(button7);
+		this.add(button8);
 		this.add(input1);
 		this.add(label);
 		this.setVisible(true);
