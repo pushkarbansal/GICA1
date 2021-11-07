@@ -34,5 +34,15 @@ public class Compwin {
         System.out.println("Time taken by Tim sort in miliSeconds: " + t6);
 
 
+        DefaultCategoryDataset dcd=new DefaultCategoryDataset();
+		dcd.setValue(20, "input", "time");
+		JFreeChart jchart=ChartFactory.createLineChart("pushkar","number of inputs", "time needed", dcd);
+
+
+
+
+        
+
+
     }
 }
