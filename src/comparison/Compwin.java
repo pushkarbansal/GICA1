@@ -4,6 +4,14 @@ import java.awt.Color;
 
 import javax.swing.JFrame;
 
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
+
 public class Compwin {
     public Compwin(int a[]){
         JFrame f1 = new JFrame();
@@ -33,10 +41,42 @@ public class Compwin {
         float t6 = c6.val();
         System.out.println("Time taken by Tim sort in miliSeconds: " + t6);
 
+        
+        
+      	
+            final XYSeries firefox = new XYSeries( "algo1" );          
+            firefox.add( 0.0 , t1 );          
+            firefox.add( 2.0 , 4.0 );          
+                     
+            
+            final XYSeries chrome = new XYSeries( "algo2" );          
+            chrome.add( 0.0 , 0.0 );          
+            chrome.add( 2.0 , 5.0 );          
+                      
+            
+            final XYSeries iexplorer = new XYSeries( "algo3" );          
+            iexplorer.add( 0.0 , 0.0 );          
+            iexplorer.add( 4.0 , 5.0 );          
+            
+            
+            
+            
 
-        DefaultCategoryDataset dcd=new DefaultCategoryDataset();
-		dcd.setValue(20, "input", "time");
-		JFreeChart jchart=ChartFactory.createLineChart("pushkar","number of inputs", "time needed", dcd);
+            final XYSeriesCollection dataset = new XYSeriesCollection( );          
+            dataset.addSeries( firefox );          
+            dataset.addSeries( chrome );          
+            dataset.addSeries( iexplorer );
+           
+		JFreeChart xylineChart = ChartFactory.createXYLineChart(
+		         "comparison" ,
+		         "Number of Input --->" ,
+		         "Time taken (Milli seconds)----->" ,
+		         dataset ,
+		         PlotOrientation.VERTICAL ,
+		         true , true , false);
+		ChartPanel chartPanel = new ChartPanel(xylineChart );
+		chartPanel.setPreferredSize( new java.awt.Dimension( 460 , 367 ) );
+		f1.setContentPane(chartPanel);
 
 
 
@@ -45,4 +85,5 @@ public class Compwin {
 
 
     }
+   
 }
