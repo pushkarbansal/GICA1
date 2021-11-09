@@ -19,8 +19,7 @@ public class Stoogesort {
            new Model(timeElapsed/1000000);
   }
   float val(){
-    return (timeElapsed/1000000);
-  }
+	  return (timeElapsed);  }
   
     static int[] stoogesort(int arr[], int l, int h)
     {

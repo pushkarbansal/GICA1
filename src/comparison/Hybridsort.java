@@ -23,8 +23,7 @@ public class Hybridsort {
         
     }
 	float val(){
-        return (timeElapsed/1000000);
-      }
+		return (timeElapsed);      }
     
 	private static void insertionSort(int a[], int low,	int high)
 	{

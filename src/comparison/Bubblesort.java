@@ -23,8 +23,7 @@ public class Bubblesort {
         
     }
     float val(){
-        return (timeElapsed/1000000);
-      }
+    	return (timeElapsed);      }
     int[] bubbleSort(int arr[])
         {
             int n = arr.length;

@@ -19,8 +19,7 @@ public class Mergesort {
         //    new Model(timeElapsed/1000000);
     }
     float val(){
-        return (timeElapsed/1000000);
-      }
+    	return (timeElapsed);      }
     
     // Merges two subarrays of arr[].
     // First subarray is arr[l..m]

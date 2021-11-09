@@ -23,7 +23,7 @@ public class Heapsort {
         
     }
     float val(){
-        return (timeElapsed/1000000);
+        return (timeElapsed);
       }
     
 	public int[] heapSort(int arr[])

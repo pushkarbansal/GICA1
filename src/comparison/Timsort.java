@@ -20,8 +20,7 @@ public class Timsort {
         //    new Model(timeElapsed/1000000);
    }
    float val(){
-	return (timeElapsed/1000000);
-  }
+	   return (timeElapsed);  }
    static int MIN_MERGE = 32;
   
     public static int minRunLength(int n)
