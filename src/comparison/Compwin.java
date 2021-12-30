@@ -17,6 +17,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import java.awt.GridBagLayout;
+
 import java.awt.BorderLayout;
 import javax.swing.JSplitPane;
 import javax.swing.JInternalFrame;

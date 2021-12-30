@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+H:\upes course\5th sem\MINOR 1.O\coding part\GICA\.metadata\.plugins\org.eclipse.jdt.core
